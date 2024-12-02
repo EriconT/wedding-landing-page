@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo & Enrico - Wedding</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .hero {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #4a4a4a;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .section {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .gift-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .language-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .language-toggle:hover {
+            background-color: #0056b3;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <button id="languageToggle" class="language-toggle">Italiano</button>
+
+    <div id="englishContent">
+        <div class="hero">
+            <h1>Lo & Enrico</h1>
+            <h2>We're Getting Married!</h2>
+            <p>Join us for a celebration of love</p>
+        </div>
+
+        <div class="section">
+            <h3>Wedding Details</h3>
+            <p>Date: Saturday, September 15, 2024</p>
+            <p>Time: 4:00 PM</p>
+            <p>Venue: Sunset Garden Resort</p>
+            <p>123 Love Lane, Romantic City</p>
+        </div>
+
+        <div class="section gift-section">
+            <h3>Wedding Gift</h3>
+            <p>If you would like to give a gift, we appreciate your generosity.</p>
+            <p>Bank Details:</p>
+            <p>IBAN: DE89 3704 0044 0532 0130 00</p>
+            <div class="qr-code">
+                QR Code Placeholder
+            </div>
+        </div>
+    </div>
+
+    <div id="italianContent" style="display: none;">
+        <div class="hero">
+            <h1>Lo & Enrico</h1>
+            <h2>Ci sposiamo!</h2>
+            <p>Unitevi a noi per celebrare il nostro amore</p>
+        </div>
+
+        <div class="section">
+            <h3>Dettagli del Matrimonio</h3>
+            <p>Data: Sabato, 15 Settembre 2024</p>
+            <p>Ora: 16:00</p>
+            <p>Sede: Sunset Garden Resort</p>
+            <p>123 Love Lane, Città Romantica</p>
+        </div>
+
+        <div class="section gift-section">
+            <h3>Regalo di Nozze</h3>
+            <p>Se desiderate fare un regalo, apprezziamo la vostra generosità.</p>
+            <p>Coordinate Bancarie:</p>
+            <p>IBAN: DE89 3704 0044 0532 0130 00</p>
+            <div class="qr-code">
+                Segnaposto del Codice QR
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('languageToggle').addEventListener('click', function() {
+            const englishContent = document.getElementById('englishContent');
+            const italianContent = document.getElementById('italianContent');
+            const languageToggle = document.getElementById('languageToggle');
+
+            if (englishContent.style.display !== 'none') {
+                englishContent.style.display = 'none';
+                italianContent.style.display = 'block';
+                languageToggle.textContent = 'English';
+            } else {
+                englishContent.style.display = 'block';
+                italianContent.style.display = 'none';
+                languageToggle.textContent = 'Italiano';
+            }
+        });
+    </script>
+</body>
+</html>
